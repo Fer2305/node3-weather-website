@@ -3,8 +3,8 @@ const request = require('request')
 
 
 const forecast = (latitude, longitude, callback) => {
-    const url = 'https://api.darksky.net/forecast/bd935a637cf30df82ae830152c91a02b/'+latitude+','+longitude+'&lang=es'
-    
+    const url = 'https://api.darksky.net/forecast/bd935a637cf30df82ae830152c91a02b/'+latitude+','+longitude+'?lang=es'
+    console.log(url)
     request({url, json: true}, (error, {body}) => {
         if(error){
            callback('No se puede acceder al servicio climato', undefined)
