@@ -10,7 +10,7 @@ weatherForm.addEventListener('submit', (e) => {
     messageOne.textContent = 'Loading...'
     messageTwo.textContent = ''
 
-    fetch('wheather?address=' + location).then ((response) => {
+    fetch('/wheather?address=' + location).then ((response) => {
         response.json().then((data) => {
             if(data.error){
                 messageOne.textContent = 'No se pudo encontrar el sitio'
